@@ -69,10 +69,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url; ?>/pembatalan" class="nav-link">
+                        <a href="<?= base_url; ?>/barangkeluar" class="nav-link">
                             <i class="nav-icon fas fa-user-times"></i>
                             <p>
-                                Data Pembatalan
+                                Data Barang Keluar
                             </p>
                         </a>
                     </li>
