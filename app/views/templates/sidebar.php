@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/kategori" class="nav-link">
-                            <i class="nav-icon fas fa-user-tie"></i>
+                            <i class="nav-icon fas fa-undo-alt"></i>
                             <p>
                                 Data Kategori
                             </p>
@@ -45,7 +45,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/petugas" class="nav-link">
-                            <i class="nav-icon fas fa-undo-alt"></i>
+                            <i class="nav-icon fas fa-user-tie"></i>
                             <p>
                                 Data Petugas
                             </p>

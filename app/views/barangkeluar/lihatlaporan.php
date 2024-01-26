@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <title>Laporan Barang Keluar</title>
 
-    <link rel="icon" type="image/x-icon" href="<?= base_url; ?>/dist/img/logo-bawaslu.png">
-
     <!-- Normalize or reset CSS with your favorite library -->
     <link rel="stylesheet" href="<?= base_url ?>/dist/js/normalize.min.css">
     <!-- Load paper.css for happy printing -->
@@ -72,10 +70,9 @@
     <section class="sheet">
         <!-- Header/Kop Surat -->
         <div class="header">
-            <img src="<?= base_url ?>/dist/img/logo-bawaslu-kalsel.png" alt="Logo" style="width: 300px; height: auto;">
-            <h2><b>Badan Pengawas Pemilihan Umum Provinsi Kalimantan Selatan</b></h2>
-            <p>Jl. RE Martadinata No.3, Kertak Baru Ilir, Kec. Banjarmasin Tengah, Kota Banjarmasin, <br>Kalimantan Selatan 70231</p>
-            <p>Telepon: (0511) 6726 437 | Email: set.kalsel@gmail.go.id</p>
+            <img src="<?= base_url ?>" alt="" style="width: 300px; height: auto;">
+            <h2><b>MANAJEMEN DATA BARANG</b></h2>
+            <h2><b>BARANG PLUS</b></h2>
         </div>
 
         <h1 style="text-align: center;">Laporan Barang Keluar</h1>
