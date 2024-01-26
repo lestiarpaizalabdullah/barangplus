@@ -18,19 +18,23 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" action="<?= base_url; ?>/petugas/simpanPetugas" method="POST" enctype="multipart/form-data">
+            <form role="form" action="<?= base_url; ?>/supplier/simpanSupplier" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Id Petugas</label>
-                        <input type="text" class="form-control" placeholder="Masukkan id petugas..." name="id_petugas">
+                        <label>Id Supplier</label>
+                        <input type="text" class="form-control" placeholder="Masukkan id supplier..." name="id_supplier">
                     </div>
                     <div class="form-group">
-                        <label>Nama Petugas</label>
-                        <input type="text" class="form-control" placeholder="Masukkan nama petugas..." name="nama_petugas">
+                        <label>Nama Supplier</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nama supplier..." name="nama_supplier">
                     </div>
                     <div class="form-group">
-                        <label>Jabatan</label>
-                        <input type="text" class="form-control" placeholder="Masukkan jabatan petugas..." name="jabatan">
+                        <label>Alamat</label>
+                        <input type="text" class="form-control" placeholder="Masukkan alamat supplier..." name="alamat">
+                    </div>
+                    <div class="form-group">
+                        <label>No. Telepon</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nomor telepon supplier..." name="no_telp">
                     </div>
                 </div>
                 <!-- /.card-body -->

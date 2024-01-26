@@ -27,12 +27,11 @@ class PetugasModel
 
     public function tambahPetugas($data)
     {
-        $query = "INSERT INTO petugas(nama_petugas, jabatan, no_telp, email) VALUES (:nama_petugas, :jabatan, :no_telp, :email)";
+        $query = "INSERT INTO petugas(id_petugas, nama_petugas, jabatan) VALUES (:id_petugas, :nama_petugas, :jabatan)";
         $this->db->query($query);
+        $this->db->bind('id_petugas', $data['id_petugas']);
         $this->db->bind('nama_petugas', $data['nama_petugas']);
         $this->db->bind('jabatan', $data['jabatan']);
-        $this->db->bind('no_telp', $data['no_telp']);
-        $this->db->bind('email', $data['email']);
         $this->db->execute();
 
         return $this->db->rowCount();
@@ -40,13 +39,12 @@ class PetugasModel
 
     public function updateDataPetugas($data)
     {
-        $query = 'UPDATE petugas SET nama_petugas=:nama_petugas, jabatan=:jabatan, no_telp=:no_telp, email=:email WHERE id_petugas=:id';
+        $query = 'UPDATE petugas SET id_petugas=:id_petugas, nama_petugas=:nama_petugas, jabatan=:jabatan WHERE id_petugas=:id';
         $this->db->query($query);
         $this->db->bind('id', $data['id_petugas']);
+        $this->db->bind('id_petugas', $data['id_petugas']);
         $this->db->bind('nama_petugas', $data['nama_petugas']);
         $this->db->bind('jabatan', $data['jabatan']);
-        $this->db->bind('no_telp', $data['no_telp']);
-        $this->db->bind('email', $data['email']);
         $this->db->execute();
 
         return $this->db->rowCount();

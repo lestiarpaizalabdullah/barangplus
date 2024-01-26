@@ -2,7 +2,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="#" class="brand-link">
-            <span class="brand-text font-weight-light">SiPiRu</span>
+            <span class="brand-text font-weight-bold">BarangPlus</span>
         </a>
 
         <!-- Sidebar -->
@@ -10,7 +10,7 @@
             <!-- Sidebar user (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
-                    <a href="#" class="d-block">@alrahmnn</a>
+                    <a href="#" class="d-block">@LestiarPaizalAbdullah</a>
                 </div>
             </div>
 
@@ -18,6 +18,7 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                    <li class="nav-header">DATA MASTER</li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/home" class="nav-link">
                             <i class="nav-icon fas fa-th-large"></i>
@@ -43,26 +44,27 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url; ?>/asalpeminjam" class="nav-link">
+                        <a href="<?= base_url; ?>/petugas" class="nav-link">
                             <i class="nav-icon fas fa-undo-alt"></i>
                             <p>
-                                Data Asal Peminjam
+                                Data Petugas
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url; ?>/peminjam" class="nav-link">
+                        <a href="<?= base_url; ?>/supplier" class="nav-link">
                             <i class="nav-icon fas fa-user-tag"></i>
                             <p>
-                                Data Peminjam
+                                Data Supplier
                             </p>
                         </a>
                     </li>
+                    <li class="nav-header">DATA TRANSAKSI</li>
                     <li class="nav-item">
-                        <a href="<?= base_url; ?>/peminjaman" class="nav-link">
+                        <a href="<?= base_url; ?>/stokbarang" class="nav-link">
                             <i class="nav-icon fas fa-user-plus"></i>
                             <p>
-                                Data Peminjaman
+                                Data Stok Barang
                             </p>
                         </a>
                     </li>
