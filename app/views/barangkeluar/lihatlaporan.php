@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Laporan Pembatalan Peminjaman</title>
+    <title>Laporan Barang Keluar</title>
 
     <link rel="icon" type="image/x-icon" href="<?= base_url; ?>/dist/img/logo-bawaslu.png">
 
@@ -78,30 +78,28 @@
             <p>Telepon: (0511) 6726 437 | Email: set.kalsel@gmail.go.id</p>
         </div>
 
-        <h1 style="text-align: center;">Laporan Pembatalan Peminjaman</h1>
+        <h1 style="text-align: center;">Laporan Barang Keluar</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th style="width: 10px">No</th>
-                    <th>ID Peminjaman</th>
-                    <th>Petugas</th>
-                    <th>Peminjam</th>
-                    <th>Tanggal Pembatalan</th>
-                    <th>Waktu Pembatalan</th>
-                    <th>Alasan Pembatalan</th>
+                    <th>Id Keluar</th>
+                    <th>Nama Barang</th>
+                    <th>Nama Petugas</th>
+                    <th>Tanggal Keluar</th>
+                    <th>Jumlah Barang</th>
                 </tr>
             </thead>
             <tbody>
                 <?php $no = 1; ?>
-                <?php foreach ($data['pembatalan'] as $row) : ?>
+                <?php foreach ($data['barang_keluar'] as $row) : ?>
                     <tr>
                         <td><?= $no; ?></td>
-                        <td><?= $row['id_peminjaman']; ?></td>
-                        <td><?= $row['id_petugas']; ?></td>
-                        <td><?= $row['id_peminjam']; ?></td>
-                        <td><?= $row['tanggal_pembatalan']; ?></td>
-                        <td><?= $row['waktu_pembatalan']; ?></td>
-                        <td><?= $row['alasan_pembatalan']; ?></td>
+                        <td><?= $row['id_keluar']; ?></td>
+                        <td><?= $row['nama_barang']; ?></td>
+                        <td><?= $row['nama_petugas']; ?></td>
+                        <td><?= $row['tgl_keluar']; ?></td>
+                        <td><?= $row['jumlah_barang']; ?></td>
                     </tr>
                 <?php $no++;
                 endforeach; ?>

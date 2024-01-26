@@ -89,4 +89,12 @@ class Supplier extends Controller
             exit;
         }
     }
+
+    public function cariSupplier()
+    {
+        $key = $_POST['key'];
+        $this->db->query("SELECT * FROM " . $this->table . " WHERE nama_supplier LIKE :key");
+        $this->db->bind('key', "%$key%");
+        return $this->db->resultSet();
+    }
 }

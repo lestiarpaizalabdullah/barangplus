@@ -89,4 +89,12 @@ class Barang extends Controller
             exit;
         }
     }
+
+    public function cariBarang()
+    {
+        $key = $_POST['key'];
+        $this->db->query("SELECT * FROM " . $this->table . " WHERE nama_barang LIKE :key");
+        $this->db->bind('key', "%$key%");
+        return $this->db->resultSet();
+    }
 }

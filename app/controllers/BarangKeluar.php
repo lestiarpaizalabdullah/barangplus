@@ -93,4 +93,11 @@ class BarangKeluar extends Controller
             exit;
         }
     }
+
+    public function lihatlaporan()
+    {
+        $data['title'] = 'Data Laporan Barang Keluar';
+        $data['barang_keluar'] = $this->model('BarangKeluarModel')->getAllBarangKeluar();
+        $this->view('barangkeluar/lihatlaporan', $data);
+    }
 }

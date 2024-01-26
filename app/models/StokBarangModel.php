@@ -76,4 +76,17 @@ class StokBarangModel
 
         return $this->db->rowCount();
     }
+
+    public function cariStokBarang($key)
+    {
+        $this->db->query('SELECT stok_barang.*, barang.nama_barang, kategori.nama_kategori, petugas.nama_petugas, supplier.nama_supplier FROM ' . $this->table . '
+        JOIN barang ON barang.id_barang = stok_barang.id_barang
+        JOIN kategori ON kategori.id_kategori = stok_barang.id_kategori
+        JOIN petugas ON petugas.id_petugas = stok_barang.id_petugas
+        JOIN supplier ON supplier.id_supplier = stok_barang.id_supplier
+        WHERE barang.nama_barang LIKE :key OR kategori.nama_kategori LIKE :key OR petugas.nama_petugas LIKE :key OR supplier.nama_supplier LIKE :key');
+        $this->db->bind('key', '%' . $key . '%'); // Perbaikan pada bagian ini
+
+        return $this->db->resultSet();
+    }
 }

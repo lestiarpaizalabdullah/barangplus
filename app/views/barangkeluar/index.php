@@ -24,9 +24,23 @@
                 <h3 class="card-title"><?= $data['title'] ?></h3>
                 <div class="btn-group float-right">
                     <a href="<?= base_url; ?>/barangkeluar/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Barang Keluar</a>
+                    <a href="<?= base_url; ?>/barangkeluar/lihatlaporan" class="btn float-right btn-xs btn btn-warning" target="_blank">Lihat Laporan Barang Keluar</a>
                 </div>
             </div>
             <div class="card-body">
+                <form action="<?= base_url; ?>/barangkeluar/cari" method="post">
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="" name="key">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit">Cari Data</button>
+                                    <a class="btn btn-outline-danger" href="<?= base_url; ?>/barangkeluar">Reset</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -45,8 +59,8 @@
                             <tr>
                                 <td><?= $no; ?></td>
                                 <td><?= $row['id_keluar']; ?></td>
-                                <td><?= $row['id_barang']; ?></td>
-                                <td><?= $row['id_petugas']; ?></td>
+                                <td><?= $row['nama_barang']; ?></td>
+                                <td><?= $row['nama_petugas']; ?></td>
                                 <td><?= $row['tgl_keluar']; ?></td>
                                 <td><?= $row['jumlah_barang']; ?></td>
                                 <td>

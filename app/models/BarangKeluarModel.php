@@ -67,4 +67,15 @@ class BarangKeluarModel
 
         return $this->db->rowCount();
     }
+
+    public function cariBarangKeluar($key)
+    {
+        $this->db->query('SELECT barang_keluar.*, barang.nama_barang, petugas.nama_petugas FROM ' . $this->table . '
+        JOIN barang ON barang.id_barang = barang_keluar.id_barang
+        JOIN petugas ON petugas.id_petugas = barang_keluar.id_petugas
+        WHERE barang.nama_barang LIKE :key OR petugas.nama_petugas LIKE :key');
+        $this->db->bind('key', '%' . $key . '%'); // Perbaikan pada bagian ini
+
+        return $this->db->resultSet();
+    }
 }
